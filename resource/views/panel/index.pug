@@ -1,0 +1,83 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Panel de Administraci&oacute;n
+  link(rel='stylesheet' type='text/css' href='/css/navbar.css')
+  link(rel='stylesheet' type='text/css' href='/css/panel.css')
+  link(rel='icon' type='image/x-icon' href='/img/favicon.ico')
+  script(src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous')
+  script(src='../js/navbar.js')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  script(src='https://kit.fontawesome.com/6ee540ddc5.js' crossorigin='anonymous')
+header.header
+  nav.nav
+    .logo
+      a(href='#')
+        img(src='/img/logo.png' width='80' height='80')
+    .exit
+      a.salir(href='/')
+        | Salir 
+        i.out.fa-solid.fa-right-from-bracket.out
+  .vertical-nav
+    a(href='#')
+      i#menu.menu.fa-solid.fa-bars
+  #sidebar.sidebar
+    .cont
+      h2 MENU
+      ul.menu-list
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='/panel/') Panel
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='#') Administrador
+          ul.menu-submenu
+            li
+              a.nav1.exit(href='#') Registrar Segundo Admin
+            li
+              a.nav1.exit(href='/panel/listar') Lista Admins
+            li
+              a.nav1.exit(href='#') Vincular Redes
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='/login/recuperar') Cambiar Contrase&ntilde;a
+.content
+  .tarjeta
+    label#check.check
+      input#cbox1(type='checkbox' value='')
+      span.checkmark
+    .titulo
+      | &iquest;Cu&aacute;ntas electivas profesionales y socio-human&iacute;sticas hay que cursar y aprobar como requisito en la carrera de Ingenier&iacute;a de Sistemas?
+    .respuesta
+      | Pensum vigente  (115-03)  : 6 Electivas profesionales, 3 Electivas Socio-humanisticas
+    .base
+      span 22/06/2022
+  .tarjeta
+    label#check.check
+      input#cbox1(type='checkbox' value='')
+      span.checkmark
+    .titulo &iquest;Qu&eacute; tipos de modalidades de grado hay actualmente?
+    .respuesta
+      | 1.  TRABAJO DE GRADO 2. CURSO DE PROFUNDIZACI&Oacute;N,  3. TRABAJOS DIRIGIDO 4. PASANTIAS 5. TRABAJO DE INVESTIGACION
+    .base
+      span 22/06/2022
+  .tarjeta
+    label#check.check
+      input#cbox1(type='checkbox' value='')
+      span.checkmark
+    .titulo &iquest;Cu&aacute;les son los requisitos para realizar los cursos de profundizaci&oacute;n?
+    .respuesta
+      | 1. Estar matriculado  2.  haber terminado todas las materias.   3.Tener  promedio   igual o superior a 3.1    4. Pagar los derechos pecuniarios
+    .base
+      span 22/06/2022
+.opciones
+  .boton
+    a.registrar(href='/panel/agregar/') Registrar Consulta
+  .boton2
+    a.editar(href='/panel/editarPregunta/') Editar
+    a.eliminar(href='#') Eliminar
+footer
+  p
+    | &copy; 2022 Ing Sistemas
+    br
+    a(href='https://sites.google.com/ufps.edu.co/chatbot/' target='_blank') Contactanos

@@ -1,0 +1,67 @@
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Panel de Administraci&oacute;n
+  link(rel='stylesheet' type='text/css' href='/css/navbar.css')
+  link(rel='stylesheet' type='text/css' href='/css/listar.css')
+  link(rel='icon' type='image/x-icon' href='img/favicon.ico')
+  script(src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous')
+  script(src='/js/navbar.js')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  script(src='https://kit.fontawesome.com/6ee540ddc5.js' crossorigin='anonymous')
+header.header
+  nav.nav
+    .logo
+      a(href='#')
+        img(src='/img/logo.png' width='80' height='80')
+    .exit
+      a.salir(href='/')
+        | Salir 
+        i.out.fa-solid.fa-right-from-bracket.out
+  .vertical-nav
+    a(href='#')
+      i#menu.menu.fa-solid.fa-bars
+  #sidebar.sidebar
+    .cont
+      h2 MENU
+      ul.menu-list
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='/panel/') Panel
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='#') Administrador
+          ul.menu-submenu
+            li
+              a.nav1.exit(href='/panel/agregarUsuario/') Registrar Segundo Admin
+            li
+              a.nav1.exit(href='/panel/listar') Lista Admins
+            li
+              a.nav1.exit(href='#') Vincular Redes
+        li#nav1.exit
+          span.icon-plus
+          a.menu-link(href='/login/recuperar') Cambiar Contrase&ntilde;a
+h2.enunciado.content Administradores Registrados
+.content
+  .tarjeta
+    .titulo Felipe Cortez
+    .cuerpo
+      .boton
+        a.btn(href='#') Editar
+        a.btn(href='#') Eliminar
+        a.btn(href='#') Agregar Permisos
+  .tarjeta
+    .titulo Alicia Margo
+    .cuerpo
+      .boton
+        a.btn(href='#') Editar
+        a.btn(href='#') Eliminar
+        a.btn(href='#') Agregar Permisos
+.opciones
+  .boton
+    a.registrar(href='/panel/agregarUsuario/') Registrar Administrador
+footer
+  p
+    | &copy; 2022 Ing Sistemas
+    br
+    a(href='https://sites.google.com/ufps.edu.co/chatbot/' target='_blank') Contactanos
